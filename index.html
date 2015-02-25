@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- 
+	Tutorial I'm working with can be found at:
+	http://code.tutsplus.com/tutorials/getting-cozy-with-underscorejs--net-24581
+
+	A little about me:
+
+	I'm multifaceted web designer and developer from the suburbs of Philadelphia and 
+	I love merging design with code to build beautiful websites and UIs.
+ -->
+	<title>Underscore </title>
+</head>
+<body>
+
+
+<h1>Check the console.
+</h1>
+
+<script type="text/javascript" src="js/underscore-pro.js"></script>
+<script type="text/javascript">
+// 	var scores = [84, 99, 91, 65, 87, 55, 72, 68, 95, 42], 
+// topScorers = [], scoreLimit = 90;
+ 
+// for (i=0; i<=scores.length; i++)
+// {
+//     if (scores[i]>scoreLimit)
+//     {
+//         topScorers.push(scores[i]);
+//     }
+// }
+ 
+// console.log(topScorers);
+
+// vs
+
+
+var scores = [84, 99, 91, 65, 87, 55, 72, 68,95, 42], topScorers = [], scoreLimit = 90;
+
+// functional approach
+// topScorers = _.select(scores, function(score){ return score > scoreLimit;});
+
+// object oriented approach
+
+topScorers = _(scores).select(function(score){ return score > scoreLimit; });
+
+// There is no real 'right' way to do things but keep in mind that you can 
+// jQuery-esque method chaining with the latter method.
+
+console.log(topScorers);
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
