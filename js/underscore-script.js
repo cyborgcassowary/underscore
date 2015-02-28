@@ -41,6 +41,16 @@ var niches = _.pluck(JS, 'niche');
 
 console.log(niches);
 
+var js2 = [{name : 'ember', niche : 'Ember JS'}, {name : 'angular', niche : 'angular js'}];
+
+var niches2 = _.pluck(js2, 'niche');
+
+var names2 = _.pluck(js2, 'name');
+
+console.log(names2);
+
+
+
 
 /**
 	Map
@@ -51,3 +61,35 @@ console.log(niches);
 
 var names = _(JS).pluck('name').map(function (value){return value + '.js'});
 console.log(names);
+
+
+
+var SE = [{name : 'Google', niche : 'Google is a search engine'}, {name : 'Bing', niche : 'Bing is a search engine'}, {name : 'Yahoo', niche : 'Yahoo is a search engine'}, {name : 'Duck Duck Go', niche : 'Duck Duck Go is another search engine'} ]
+
+var names = _(SE).pluck('name').map(function (value){ return value + ' + '});
+
+console.log(names);
+
+var Scores = [3, 3, 88, 78,  67];
+var hasPassed =  _(Scores).all(function (value) {return value  });
+
+console.log(hasPassed);
+
+var uniqTest = _.uniq([1, 5,4,4,4,4,47,7,8,2,1,5,8,8,8,9,2,1]);
+
+console.log(uniqTest);
+
+
+var tens = _.range(0, 100, 10);
+var fives = _.range(0, 100, 5);
+var eights = _.range(0, 100, 8);
+
+var common = _.intersection(tens, fives, eights);
+
+console.log(tens );
+console.log(fives);
+
+console.log(common);
+
+
+
