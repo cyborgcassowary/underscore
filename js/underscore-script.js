@@ -62,7 +62,7 @@ console.log(names2);
 var names = _(JS).pluck('name').map(function (value){return value + '.js'});
 console.log(names);
 
-
+// MAP again
 
 var SE = [{name : 'Google', niche : 'Google is a search engine'}, {name : 'Bing', niche : 'Bing is a search engine'}, {name : 'Yahoo', niche : 'Yahoo is a search engine'}, {name : 'Duck Duck Go', niche : 'Duck Duck Go is another search engine'} ]
 
@@ -70,15 +70,21 @@ var names = _(SE).pluck('name').map(function (value){ return value + ' + '});
 
 console.log(names);
 
+// All
+
 var Scores = [3, 3, 88, 78,  67];
 var hasPassed =  _(Scores).all(function (value) {return value  });
 
 console.log(hasPassed);
 
-var uniqTest = _.uniq([1, 5,4,4,4,4,47,7,8,2,1,5,8,8,8,9,2,1]);
+// Uniq
+
+var uniqTest = _.uniq([1,5,4,4,4,4,47,7,8,2,1,5,8,8,8,9,2,1]);
 
 console.log(uniqTest);
 
+
+// Range and Intersection
 
 var tens = _.range(0, 100, 10);
 var fives = _.range(0, 100, 5);
@@ -91,5 +97,23 @@ console.log(fives);
 
 console.log(common);
 
+// Objects 
+// keys and values
 
+
+var Mages = { Necs : 'Necromancer', Conjure : 'Conjurer'};
+var spells = _.keys(Mages), values = _.values(Mages);
+
+console.log(spells );
+
+console.log(values);
+
+
+// Defaults
+
+var people {war: 'warrior'}
+var defaults = {war: 'warrior', niche : 'axe'};
+
+_.defaults(people, defaults);
+console.log(people);
 
